@@ -16,7 +16,7 @@
 不混淆<br>
 使用友盟测试key<br>
 log[LOG_DEBUG]状态打开<br>
-随拍白名单[CAMERA_DEBUG]关闭<br>
+白名单[CAMERA_DEBUG]关闭<br>
 
 **preview:**<br>
 通常为内部预览版,提交测试使用<br>
@@ -25,7 +25,7 @@ log[LOG_DEBUG]状态打开<br>
 使用友盟测试key<br>
 打包发往友盟升级后台,提供测试环境测试<br>
 log[LOG_DEBUG]状态打开<br>
-随拍白名单[CAMERA_DEBUG]关闭<br>
+白名单[CAMERA_DEBUG]关闭<br>
 
 **release:**<br>
 正式发布版,打一个生成加固包，再打出相对数量的渠道包<br>
@@ -34,7 +34,7 @@ log[LOG_DEBUG]状态打开<br>
 使用友盟正式key<br>
 打包发往友盟升级后台,提供生产环境测试<br>
 log[LOG_DEBUG]状态关闭<br>
-随拍白名单[CAMERA_DEBUG]打开<br>
+白名单[CAMERA_DEBUG]打开<br>
 
 productFlavors：多渠道出一个包即可，打完后生成加固包
 
