@@ -1,27 +1,35 @@
-# APK¿Õ°üÇ©Ãû
+# java/adbå¸¸ç”¨å‘½ä»¤
 
-±êÇ©£¨¿Õ¸ñ·Ö¸ô£©£º Î´·ÖÀà
+æ ‡ç­¾ï¼ˆç©ºæ ¼åˆ†éš”ï¼‰ï¼š æœªåˆ†ç±»
 
 ---
 
-Ö®Ç°½Óµ½ÕâÑùÒ»¸öĞèÇó£¬ÉÏ¼ÜËÑ¹·Ó¦ÓÃÊĞ³¡ĞèÒª¸øËûÃÇÆ½Ì¨Ìá¹©µÄÒ»¸öapkÎÄ¼ş£¬½«ÆäÓÃÎÒÃÇµÄkeystore ½øĞĞÇ©Ãû£¬µ±È»ÆäËûÆ½Ì¨¶¼¿ÉÒÔÊÊÓÃ¡£
+1.apkç©ºåŒ…ç­¾å
+
+ä¹‹å‰æ¥åˆ°è¿™æ ·ä¸€ä¸ªéœ€æ±‚ï¼Œä¸Šæ¶æœç‹—åº”ç”¨å¸‚åœºéœ€è¦ç»™ä»–ä»¬å¹³å°æä¾›çš„ä¸€ä¸ªapkæ–‡ä»¶ï¼Œå°†å…¶ç”¨æˆ‘ä»¬çš„keystore è¿›è¡Œç­¾åï¼Œå½“ç„¶å…¶ä»–å¹³å°éƒ½å¯ä»¥é€‚ç”¨ã€‚
 http://zhushou.sogou.com/open/news-9.html
 
 
-ÎÒÔÚÍøÉÏ²éÁËÏÂ£¬ÆäÊµºÜ¼òµ¥£¬jdkÒÑ¾­¸úÎÒÃÇÌá¹©ºÃ¹¤¾ßÁË£¬¾ßÌåÃüÁîÈçÏÂ
+æˆ‘åœ¨ç½‘ä¸ŠæŸ¥äº†ä¸‹ï¼Œå…¶å®å¾ˆç®€å•ï¼Œjdkå·²ç»è·Ÿæˆ‘ä»¬æä¾›å¥½å·¥å…·äº†ï¼Œå…·ä½“å‘½ä»¤å¦‚ä¸‹
 ```
 jarsigner -verbose -keystore [keystorePath] -signedjar [apkOut] [apkIn] [alias]
 ```
 
-jarsignerÃüÁî¸ñÊ½£º-verboseÊä³öÏêÏ¸ĞÅÏ¢ -keystoreÃÜÔ¿¿âÎ»ÖÃ -signedjarÒªÉú³ÉµÄÎÄ¼ş ÒªÇ©ÃûµÄÎÄ¼ş ÃÜÔ¿¿âÎÄ¼ş
-keystorePath²ÎÊı´ú±íkeyStoreµÄ¾ø¶ÔÂ·¾¶£¬ÈçD:\keystore
-apkOut²ÎÊı´ú±íÇ©ÃûºóµÄapkÂ·¾¶£¬ÈçD:\signed.apk
-apkin²ÎÊı´ú±íÔÚÌÚÑ¶Ó¦ÓÃÖĞĞÄÏÂÔØµÄÎ´Ç©Ãûapk£¬Ä¬ÈÏÃû³ÆÎªtap_unsign.apk
-alias²ÎÊı´ú±íÇ©ÃûÓÃµÄaliasÃû³Æ£¨´´½¨keyStoreÊ±ËùÌîĞ´£©£¬Èçtimdong
+jarsignerå‘½ä»¤æ ¼å¼ï¼š-verboseè¾“å‡ºè¯¦ç»†ä¿¡æ¯ -keystoreå¯†é’¥åº“ä½ç½® -signedjarè¦ç”Ÿæˆçš„æ–‡ä»¶ è¦ç­¾åçš„æ–‡ä»¶ å¯†é’¥åº“æ–‡ä»¶
+keystorePathå‚æ•°ä»£è¡¨keyStoreçš„ç»å¯¹è·¯å¾„ï¼Œå¦‚D:\keystore
+apkOutå‚æ•°ä»£è¡¨ç­¾ååçš„apkè·¯å¾„ï¼Œå¦‚D:\signed.apk
+apkinå‚æ•°ä»£è¡¨åœ¨è…¾è®¯åº”ç”¨ä¸­å¿ƒä¸‹è½½çš„æœªç­¾åapkï¼Œé»˜è®¤åç§°ä¸ºtap_unsign.apk
+aliaså‚æ•°ä»£è¡¨ç­¾åç”¨çš„aliasåç§°ï¼ˆåˆ›å»ºkeyStoreæ—¶æ‰€å¡«å†™ï¼‰ï¼Œå¦‚timdong
 
 ```
 $ jarsigner -verbose -keystore debug.keystore -signedjar test2.apk tap_unsign1.apk timdong
 ```
 
-[Ô­ÎÄÁ´½Ó][1]
+2.æŸ¥çœ‹æ‰‹æœºCPUä¿¡æ¯<br>
+cmdâ€”â€”adb shellâ€”â€”cd /proc------cat cpuinfo
+
+3.æŸ¥çœ‹apkç­¾åä¿¡æ¯<br>
+keytool -printcert -file CERT.RSA
+
+[åŸæ–‡é“¾æ¥][1]
   [1]: http://blog.csdn.net/wed110/article/details/38303637
